@@ -12,7 +12,6 @@ A five character string that must contain an uppercase letter, lowercase letter,
 Output Format
 A newline containing a message of whether the password was changed or an error has
 occurred. 
-
  * 
  * */
 
@@ -55,7 +54,7 @@ public class ChangePassword {
 		if(passWord.length() > 5){
 			
 // print to console error that the entered data is longer than the required 5 character string
-			System.out.println("Error: The password string you entered is greater than the required 5 character length.");
+			System.out.println("Error: The password string of length " + passWord.length() + " that you entered is greater than the required 5 character length.");
 
 // exit program so the rest of the code does not run			
 			System.exit(1);
@@ -64,7 +63,7 @@ public class ChangePassword {
 		else if(passWord.length() <=4) {
 			
 // print to console error that the entered data is shorter than the required 5 character string			
-			System.out.println("Error: The password string you entered is less than the required 5 character length.");
+			System.out.println("Error: The password string of length " + passWord.length() + " that you entered is less than the required 5 character length.");
 		
 // exit program so the rest of the code does not run				
 			System.exit(1);
