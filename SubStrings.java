@@ -9,6 +9,7 @@ Two strings entered by the user.
 Output Format
 The string or strings that are substrings of the other. 
  * 
+ * 
  * */
 
 // import the entire java utility using the * wildcard callout
@@ -25,6 +26,8 @@ public class SubStrings {
 		
 		String one;
 		String two;
+		char currentChar1 = ' ';
+		char currentChar2 = ' ';
 		
 		
 		System.out.println("Enter two strings: ");
@@ -34,26 +37,59 @@ public class SubStrings {
 		
 		input.close();
 		
+		
+		if(one.contains(two)) {
+			
+			
+			System.out.println("yes, string 2 is a substring of string 1");
+		}
+		
+		else {
+			
+			System.out.println("no, string 2 is not a substring of string 1");
+		}
+		
+		
+		if(two.contains(one)) {
+			
+			
+			System.out.println("yes, string 1 is a substring of string 2");
+		}
+		
+		else {
+			
+			System.out.println("no, string 1 is not a substring of string 2");
+		}
+		
+		
+		
+		
+
+		
 		for (int i = 0; i<one.length(); i++) {
 			
-			char currentChar1 = one.charAt(i);
+			currentChar1 = one.charAt(i);
 			
 			System.out.println(currentChar1);
 			
+			
+			for (int j = 0; j<two.length(); j++) {
+				
+				currentChar2 = two.charAt(j);
+				
+				System.out.println(currentChar2);
+				
+			}
+			
+			
+			if(currentChar1 == currentChar2) {
+				
+				System.out.println(currentChar1 + " is a substring of " + currentChar2);
+		}
 		}
 		
-		for (int j = 0; j<two.length(); j++) {
 			
-			char currentChar2 = two.charAt(j);
 			
-			System.out.println(currentChar2);
-			
-		}
-		
-		
-		
-		
-		
 		
 		
 		
