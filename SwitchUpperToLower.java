@@ -1,7 +1,9 @@
 /*
 Russell Streff
 CSCI 225
-Problem Set #4 - Switch lower to upper vice versa
+Problem Set #4
+
+Problem statement #2 - Switch lower to upper vice versa
 
 Take in as input a 3 character string. Any character that is upper case make lower and vice
 versa. Output the new string
@@ -36,6 +38,9 @@ public class SwitchUpperToLower {
 
 // set the variable caseSwitch to the input data entered by user             
              caseSwitch = input.next();
+             
+// print one line to console for spacing
+             System.out.println(" ");
             
 // close Scanner              
              input.close();
@@ -77,7 +82,7 @@ public class SwitchUpperToLower {
 // close for loop
              
 // print to console the new toggled string using the string variable result             
-             System.out.println("The new string with the letters toggled from their original state is : " + result);
+             System.out.println("The new string with the letters toggled from their original state is: " + result);
        }
 // close main method
 }

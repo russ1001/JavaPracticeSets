@@ -1,7 +1,9 @@
 /*
  * Russell Streff
  * CSCI 225
- * Problem Set #4 - Substrings
+ * Problem Set #4
+ * 
+ * Problem statement #5- Substrings
  * 
  * Write a program that accepts two strings and determines whether one is a substring of another.
 Input Format
@@ -24,77 +26,51 @@ public class SubStrings {
 // declare the Scanner variable input and set it's value to the console input from the user
 		Scanner input = new Scanner(System.in);
 		
+// declare the variables one and two as strings		
 		String one;
 		String two;
-		char currentChar1 = ' ';
-		char currentChar2 = ' ';
+				
+// prompt the user to enter the first string via the console		
+		System.out.println("Please enter the first string: ");
 		
-		
-		System.out.println("Enter two strings: ");
-		
+// assign the variable one the next string entered via the console		
 		one = input.next();
+
+// prompt the user to enter the second string via the console
+		System.out.println("Please enter the second string: ");
+		
+// assign the variable two the next string entered via the console	
 		two = input.next();
-		
+	
+// close Scanner		
 		input.close();
+	
+// create one line of space between the input and output		
+		System.out.println(" ");
 		
-		
+// if statement checking to see if the 1st string contains the 2nd string		
 		if(one.contains(two)) {
 			
-			
-			System.out.println("yes, string 2 is a substring of string 1");
+// if true then print to console that the 2nd string is a substring of the 1st			
+			System.out.println("Yes, the second string " + "'" + two + "'" + " is a substring of the first string " + "'" + one + "'");
 		}
-		
-		else {
-			
-			System.out.println("no, string 2 is not a substring of string 1");
-		}
-		
-		
+// close if		
+
+// if statement checking to see if the 2nd string contains the 1st string		
 		if(two.contains(one)) {
 			
-			
-			System.out.println("yes, string 1 is a substring of string 2");
+// if true then print to console that the 1st string is a substring of the 2nd			
+			System.out.println("Yes, the first string " + "'" + one + "'" + " is a substring of the second string " + "'" + two + "'");
 		}
+// close if		
 		
-		else {
+// if statement checking to see if neither string is contained in the other
+		if(!(one.contains(two)) && !(two.contains(one))) {
 			
-			System.out.println("no, string 1 is not a substring of string 2");
+// if true then print to console that neither string is a substring of the other
+			System.out.println("Neither string entered is a substring of each other.");
 		}
-		
-		
-		
-		
-
-		
-		for (int i = 0; i<one.length(); i++) {
-			
-			currentChar1 = one.charAt(i);
-			
-			System.out.println(currentChar1);
-			
-			
-			for (int j = 0; j<two.length(); j++) {
-				
-				currentChar2 = two.charAt(j);
-				
-				System.out.println(currentChar2);
-				
-			}
-			
-			
-			if(currentChar1 == currentChar2) {
-				
-				System.out.println(currentChar1 + " is a substring of " + currentChar2);
-		}
-		}
-		
-			
-			
-		
-		
-		
-		
-		
+// close if		
 	}
 // close main method	
 }
