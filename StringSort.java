@@ -35,7 +35,7 @@
 			Scanner input = new Scanner(System.in);
 			
 // declare three String variables name toonOne, toonTwo, toonThree
-			String toonOne, toonTwo, toonThree;
+			String toonOne, toonTwo, toonThree; 
 			
 // declare three boolean variables one, two, three to be used to check the alphabetical order (descending order) of the strings entered		
 			boolean one, two, three, four, five, six;
@@ -67,12 +67,15 @@
 // declare three string variables firstOne, firstTwo, firstThree that will be used to get the first word in the strings that are entered by user
 			String firstOne, firstTwo, firstThree;
 			
-// set each string variable to the corresponding entered string by user
+// set each string variable of the last names to the corresponding entered string by user
 // and assign it's value to the last word in each string entered by using the .lastIndexOf a space as reference
 // + 1 gets the last word by using the last space as reference and then using index 1 which would be the next string after the last space
 			lastOne = toonOne.substring(toonOne.lastIndexOf(" ") + 1);
 			lastTwo = toonTwo.substring(toonTwo.lastIndexOf(" ") + 1);
 			lastThree = toonThree.substring(toonThree.lastIndexOf(" ") + 1);
+			
+// set each string variable of the first names to the corresponding entered string by user
+// and assign it's value to the first word in each string entered by using .split finding the space starting at index 0	with limit 2		
 			firstOne = toonOne.split(" ", 2)[0];
 			firstTwo = toonTwo.split(" ", 2)[0];
 			firstThree = toonThree.split(" ", 2)[0];
@@ -97,13 +100,16 @@
 			six = firstOne.compareTo(firstThree)>0;
 			
 // series of if/else statements checking to see if the last name of all three entered names are the same i.e. one = two or two = three or one = three
-// if so, then check the alphabetical order (descending order) of the first names
+// if so, then check the alphabetical order (descending order) of the first names and sort them before printing the first and last names in descending order
 // print to console the appropriate first, second and third names entered in 
+// if first last name entered equals the second last name entered
 			if(one == two) {
 				
+// if the second last name entered equals the third last name entered				
 				if(two == three) {
 				
-					
+// if either of the first conditions are true then sort the first names and then print to console the corresponding sorted last and first names	
+// all of the if statements use the boolean values of the comparisons as indicators to determine the sorted list					
 					if(four == false && five == false && six == false) {
 						
 						System.out.println(toonOne + ", " + toonTwo + ", " + toonThree);
@@ -146,10 +152,16 @@
 						
 						System.out.println(firstOne + ", " + firstTwo + ", " + firstThree);
 					}
+// close if					
 					
 				}
-				
+// close if test of last names two and three being the same				
 			}
+// close if	test of last names one and two being the same
+
+			
+// series of else/if statements sorting the last names in descending order when the three entered last name are different
+// print to console the appropriate first, second and third names entered in in descending order
 			else {
 				
 				if(one == false && two == false && three == false) {
@@ -187,8 +199,8 @@
 					System.out.println(toonThree + ", " + toonTwo + ", " + toonOne);
 				}
 //close if	
-			} 
-			
+			}  
+//close else			
 			
 		}
 	// close main method	
