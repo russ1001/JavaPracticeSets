@@ -1,3 +1,23 @@
+/*Russell Streff
+CSCI 225
+Problem Set #5 - 
+
+				Problem Statement #1 – Powers 
+				
+				
+Read in as input two values.  The first value is the base number (x) which can be a decimal number.  
+The second number represents the upper exponent limit (p) and should be an integer greater than or equal to 0.  
+If the upper limit is not a positive integer display “invalid upper limit” and do nothing else.  
+If upper limit is valid then, counting from 0 to the upper limit, display x^p where p equals the current count. 
+
+Input Format 
+Two values.  The first can be any real number.  The second is strictly a positive integer value. 
+
+Output Format 
+New lines containing x^p. 
+*/
+
+
 // input entire java utility using the * wildcard callout
 import java.util.*;
 
