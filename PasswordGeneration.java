@@ -26,10 +26,11 @@ An n length string containing randomly generated characters.
 
 
 
+
+
+
 // import the entire java utility using the * wildcard callout
-
 import java.util.*;
-
 
 // import the SecureRandom class for the generation of a secure random number
 import java.security.SecureRandom;
@@ -44,32 +45,37 @@ public class PasswordGeneration {
 		Scanner input = new Scanner(System.in);
 		
 // declare the variable num as an integer
-		int num;
-		String password;
-		
-		Random random = new Random();
+		int length;
+		int newPass = 0;
+		char finalPass;
+		String ascii = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\r\n" + "";
+		SecureRandom password = new SecureRandom();
 		
 // prompt the user via the console to enter the integer to be used to help generate the random number
 		System.out.println("Please enter an integer to be used to as the length of a password generated: ");
 		
 // set the next data entered by user via the console to the input variable num
-		num = input.nextInt();
+		length = input.nextInt();
 
-		input.close();
+		input.close(); 
 		
-		if(num<=0) {
+		if(length<=0) {
 			
 			System.out.println("Error: The value entered is a negative integer");
 			System.exit(1); 
 		}
 		
-		for(int i=0; i<num; i++) {
-			
-			password = random.toString();
-			System.out.println(password);
-		}
+			for(int i=0; i<length; i++) {
 				
+				
+				newPass = password.nextInt();
+
+				finalPass = 
+				
+				
+			}
 		
+			System.out.println("-----------" + newPass);
 		
 		
 		
