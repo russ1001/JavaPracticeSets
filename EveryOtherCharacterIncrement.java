@@ -3,7 +3,7 @@
  * CSCI 225
  * Problem Set #5
  * 
- * 					Problem Statement #7 – Every Other Character
+ * 					Problem Statement #7 â€“ Every Other Character
  * 
  * 
 Write a program that prompts the user for a word and an increment. 
@@ -11,17 +11,14 @@ The increment must be
 less than the length of the word and greater than 0. 
 Print every other character at each increment starting at 0. 
 If increment is not between these values then output an error.
-
 Input Format
 The first input is a string of characters. 
 The second input must be an integer between
 0(exclusive) and the length of the string(exclusive).
-
 Output Format
 A new line containing only the characters at ever other increment starting at index 0. 
 If the increment value is equal to 0 or less or equal to the length of the string or more then output an
 error instead. 
-
  * 
  * 
  * 
@@ -78,7 +75,7 @@ public class EveryOtherCharacterIncrement {
 		System.out.println("----------------------------------------------");
 		
 // print to console explaining the output to the user
-		System.out.println("The characters that result in iterating through the string, " + word + ", by an increment of " + increment + " is: ");
+		System.out.println("The characters that result in iterating through the string \'" + word + "\' by an increment of " + increment + " is: ");
 		
 // print the first character of the string entered		
 		System.out.print(word.charAt(0));
