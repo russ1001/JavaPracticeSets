@@ -31,7 +31,7 @@ public class Powers {
 		Scanner input = new Scanner(System.in);
 		
 // declare the variable base as a double and set it's value to zero
-// declare the variable exponent as an int and set it's value to zero
+// declare the variable exponent as an integer and set it's value to zero
 		double base = 0;
 		int exponent = 0;
 		
@@ -66,6 +66,9 @@ public class Powers {
 		System.out.println("------------------------------------------------------------");
 // print to console what the reader will be shown		
 		System.out.println("The base number " + base + " to the power of " + exponent + " results in the following:");
+		
+// print dashed line to console for spacing 
+		System.out.println("------------------------------------------------------------");
 
 // for loop declaring and initializing the variable i to an integer and setting it's value to 0
 // iterate through the loop equal to the value of the exponent
