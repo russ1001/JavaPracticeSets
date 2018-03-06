@@ -2,21 +2,16 @@
  * CSCI 225
  * Problem Set #5
  * 
- * 					Problem Statement #6â€“ N2 
+ * 					Problem Statement #6– N2 
  * 
  * 
 Write a program that asks the user for a positive integer.  
 Then, using a while loop, find the smallest integer n such that n2 is greater than the users integer.  
 If the user enters an integer that is not greater than or equal to 0 then display an error. 
-
 Input Format 
 A positive integer supplied by the user. 
-
 Output Format 
-Smallest integer n such that it n2 is greater than the userâ€™s supplied number
-
-
-
+Smallest integer n such that it n2 is greater than the user’s supplied number
  */
 
 
@@ -76,7 +71,7 @@ public class IntegerSquaredGreaterThanUserInteger {
 		System.out.println("------------------------------------------------");
 		
 // print the answer of the smallest integer n such that n^2 is greater than the entered integer by the user		
-		System.out.println("The smallest integer n such that n^2 is greater than " + userInteger +  ":  " +  counter + "^2 > " + userInteger + ", the actual squared integer is " + newInteger);
+		System.out.println("The smallest integer n such that n^2 is greater than " + userInteger +  ":  " +  counter + "^2 > " + userInteger + ", and " + counter + "^2 is " + newInteger);
 		
 	}
 // close main method
