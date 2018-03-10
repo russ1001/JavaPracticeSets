@@ -72,7 +72,7 @@ public class PasswordGeneration {
 		
 // print to console the output explaining the generated random password with a dashed line for spacing the input from the output
 		System.out.println("-----------------------------------------------------------------------------------------------");
-		System.out.print("The new secure random generated password with the length of " + length + " that was entered is: ");
+		System.out.print("The new secure random generated password with a length of " + length + " that was entered is: ");
 				
 // for loop iterating from zero through the length entered by user declaring i as an integer and setting it's value to zero
 // increment one each iteration
@@ -85,7 +85,8 @@ public class PasswordGeneration {
 // set the char variable newPass to the String variable asciiSet character at index of the randomly generated integer charValue			
 			newPass = asciiSet.charAt(charValue);
 			
-			System.out.print(newPass);						 
+			System.out.print(newPass);	
+	
 		}
 // close for loop	
 	}
