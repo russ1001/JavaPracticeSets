@@ -41,7 +41,8 @@ public class PasswordGeneration {
 		
 // declare the variables length, charValue as integers and initialize their values to zero
 // declare the variable newPass as a character 
-// declare the variable asciiSet as a String and set it's value to the full printable ascii set excluding the 'space' which is the first character of the set
+// declare the variable asciiSet as a String and set it's value to the full printable ascii set 
+// excluding the 'space' which is the first character of the set
 // declare the variable password as a SecureRandom generated number
 		int length = 0;
 		int charValue = 0;
