@@ -47,33 +47,17 @@ public class MagicEightBall {
 	public static void main(String[] args) {
 		
 		
-		String newOne;
-		
-			
 		inputQuestion();
 		
 		generateEightBallAnswers();
 		
-		System.out.println("Do you wish to continue with questions Y or N?:");
-		
-		Scanner input = new Scanner(System.in);
-		
-		newOne = input.nextLine().toUpperCase();
+		keepGoing();
 		
 		
 		
-		if(newOne != "Y") {
-			
-			System.exit(1);
-		}
 		
-		inputQuestion();
-		
-		generateEightBallAnswers();
-		
-		
+		 
 	}
-
 	
 	public static String inputQuestion() {
 		
@@ -106,20 +90,38 @@ public class MagicEightBall {
 				
 		 switch(answer) {
 		
-		 case 1: System.out.println("This is a definite yes given the amount of bytes of memory that is allocated");									break;
-		 case 2: System.out.println("The great, wise and all knowing mouse says very true but you must use the Force Luke");							break;
-		 case 3: System.out.println("Of all the ASCII characters ever combined to form words, these have formed the answer POSITIVELY");				break;
-		 case 4: System.out.println("There is a possibility if you are able to code in C#");															break;
-		 case 5: System.out.println("The Python coding snake says this is a stretch so I can't seem to answer clearly");								break;
-		 case 6: System.out.println("Not sure...the glow from the flat screen display is clouding my vision");											break;
-		 case 7: System.out.println("There is no way that the operating system will allow this");														break;
-		 case 8: System.out.println("The compiler says, \"Absolutely not!\"");																			break;
-		 case 9: System.out.println("This switch statement has no break...no way");																		break;
+		 case 1: System.out.println("Magic Eight Ball says: This is a definite yes given the amount of bytes of memory that is allocated");						break;
+		 case 2: System.out.println("Magic Eight Ball says: The great, wise and all knowing mouse says very true but you must use the Force Luke");				break;
+		 case 3: System.out.println("Magic Eight Ball says: Of all the ASCII characters ever combined to form words, these have formed the answer POSITIVELY");	break;
+		 case 4: System.out.println("Magic Eight Ball says: There is a possibility if you are able to code in C#");												break;
+		 case 5: System.out.println("Magic Eight Ball says: The Python coding snake says this is a stretch so I can't seem to answer clearly");					break;
+		 case 6: System.out.println("Magic Eight Ball says: Not sure...the glow from the flat screen display is clouding my vision");							break;
+		 case 7: System.out.println("Magic Eight Ball says: There is no way that the operating system will allow this");										break;
+		 case 8: System.out.println("Magic Eight Ball says: The compiler says, \"Absolutely not!\"");															break;
+		 case 9: System.out.println("Magic Eight Ball says: This switch statement has no break...no way");														break;
 		
 		 }
 	}
 	
 	
+	
+public static String keepGoing() {
+		
+		
+		
+		String keepGoing = "";
+		
+		System.out.println("Do you want continue asking the Magic Eight Ball questions Y or N?: ");
+		
+		Scanner input = new Scanner(System.in);
+		
+		keepGoing = input.nextLine();
+		
+		return keepGoing;
+		
+		
+		
+	}
 	
 	
 	
