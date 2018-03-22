@@ -6,6 +6,7 @@ public class ComputerPI {
 	public static void main(String[] args) {
 		
 		System.out.println("i\t\tm(i)");
+		// change what i<= value to higher number for higher precision of PI
 		for (int i=10; i<=100000; i+=10) {
 			
 			System.out.println(i + "\t\t" + m(i) );
