@@ -7,39 +7,31 @@ public class SortAsInserted {
 		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Please enter the number of strings to be inserted: ");
-		int noOfStrings = input.nextInt();
+		int noOfStrings = Integer.parseInt(input.nextLine());
 		
 		String[] stringArrayFromUser = new String[noOfStrings];
 		
 		
 		
-		GetStringsFromUser();
+		for(int i=0; i<noOfStrings; i++) {
+		System.out.print("Enter a string: ");
 		
+		stringArrayFromUser[i] = input.nextLine();
 		
+		}
 		
-		
+
+	
 
 // close main method
-}
+	}
 	
 	
-
-		
-
 	
-// insert strings into a string array based on user input InsertStringFromUser method	
-	public static String[] GetStringsFromUser(String list) {
+	public static String[] InsertStringAndSort(String userEnteredString) {
 		
 		
 		
-		String[] stringList = new String[noOfStrings];
-		
-		
-		
-		
-		
-		
-		return stringList;
 		
 		
 	}
@@ -48,7 +40,31 @@ public class SortAsInserted {
 	
 	
 	
+	public static void PrintArray(String list) {
 		
+		
+		System.out.println("---------------------------------");
+		
+		for(int i=0; i<noOfStrings; i++) {
+			
+			
+			System.out.print("String " + (i+1) + " is: ");
+			System.out.print(stringArrayFromUser[i] + "\n");
+		}
+		
+	
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
 	
 	
 	
@@ -61,3 +77,9 @@ public class SortAsInserted {
 	
 }
 // close class SortAsInserted
+	
+	
+	
+		
+	
+	
