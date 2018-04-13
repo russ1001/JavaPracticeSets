@@ -37,7 +37,7 @@ A single line with the elements printed in ascending order separated by a comma.
 
 import java.util.*;
 
-public class SortAsInserted {
+public class SortAsInserted { 
 
 	public static void main(String[] args) {
 		
@@ -46,23 +46,20 @@ public class SortAsInserted {
 		System.out.println("Please enter the number of strings to be inserted: ");
 		int length = input.nextInt();
 		
-		String[] names = new String[length]; 
+		String entry = ""; 
 		 
-			int i;	 
 
-		for(i=0; i<length; i++) {
+		for(int i=0; i<length; i++) {
 			
-			
+			 
 			System.out.println("Enter string #" + (i+1));
-			names[i] = input.next();
-	
 			
+			entry = input.next();
 			
+			sortArray(entry,length);
 		} 
-
 		
-	
-		sortArray(names, length);
+
 		
 		
 		
@@ -72,13 +69,21 @@ public class SortAsInserted {
 
 	
 // sort array	
-	public static void sortArray(String[] x, int userLength) {
+	public static void sortArray(String x, int num) {
 		
 		
-			System.out.println(x[1]);
+		String[] names = new String[num];
+		
+		for(int i=0; i<num; i++) {
 			
+			names[i] = x;
+			
+		}
 		
+	for(String i: names) {
 		
+		System.out.println(i);
+	}
 		
 	}
 	
@@ -108,13 +113,3 @@ public class SortAsInserted {
 
 
 
-
-/*	System.out.println("The string array is:");
-
-for(int i=0; i<length; i++) {
-	
-	System.out.println(names[i]);
-	
-}
-
-*/
