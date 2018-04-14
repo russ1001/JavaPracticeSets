@@ -8,7 +8,7 @@
 				
 For this problem, do NOT use any class that manipulates data in a collection like the Arrays class or the Collection
 class
-Problem Statement – Sort as Inserted
+Problem Statement â€“ Sort as Inserted
 
 Write a program that accepts as its first input a number that represents the number of strings to be
 inserted followed by the Strings. 
@@ -59,7 +59,6 @@ public class SortAsInserted {
 			sortArray(entry,length);
 		} 
 		
-
 		
 		
 		
@@ -71,19 +70,18 @@ public class SortAsInserted {
 // sort array	
 	public static void sortArray(String x, int num) {
 		
-		
 		String[] names = new String[num];
+			
 		
 		for(int i=0; i<num; i++) {
+			
+			
 			
 			names[i] = x;
 			
 		}
 		
-	for(String i: names) {
-		
-		System.out.println(i);
-	}
+		printArray(names, num);
 		
 	}
 	
@@ -91,9 +89,16 @@ public class SortAsInserted {
 	
 	
 // print array	
-	public static void printArray(String[] printArray) {
+	public static void printArray(String[] printArray, int sizeOfArray) {
 		
+		for(int i=0; i<sizeOfArray; i++) {
+			
+			
+			
+			System.out.println(printArray[i]);
+			
 		
+		}
 		
 		
 		
