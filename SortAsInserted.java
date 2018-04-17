@@ -3,21 +3,21 @@
 import java.util.*;
 
 // declare the class SortAsInserted
-public class TEST { 
+public class SortAsInserted { 
 
 // declare the main method	
 	public static void main(String[] args) {
 		
 // declare the Scanner variable input and set it to the entered data from keyboard		
 		Scanner input = new Scanner(System.in);
-		
+		 
 // print to console and prompt user to enter the number of strings to be sorted		
 		System.out.println("Please enter the number of strings to be sorted: ");
 		
 // declare the integer variable length and set it's value to the next inputted value from the user 		
 		int length = input.nextInt();
 		
-		if(length<1) {
+		if(length<1) {  
 			
 			System.out.println("Error: You entered a non-positive number");
 			System.exit(1); 
@@ -34,108 +34,91 @@ public class TEST {
 	
 	
 	
+	
+	
+	
+	
+	
+	
 // sort array method named sortArray
 	public static void sortArray(int userLength){
 		
-		Scanner in = new Scanner(System.in);
-		String[] methodArray = new String[userLength];
-		String a;
-		String b;
-		String temp="";
+	
+		
+		String[] list = new String[userLength];
+		Scanner input = new Scanner(System.in);
+		String temp = "";
+		String key1 = "";
+		String key2 ="";
 		int i = 0;
 		
 		
-// WHILE		
-			while(i<userLength) {
+		System.out.println("Enter a string: ");
+		String element = input.next(); 
+		list[i] = element;
+		
+		if(userLength==1) {
+			
+			printArray(list);
+			return; 
+		}
+		 
+		
+		for(i=0; i<userLength-1; i++) {
+			
+			System.out.println("Enter a string: ");
+			element = input.next(); 
+			list[i+1] = element;
+			
+			
+			int minIndex = i;
+			
+			for(int j=i+1; j<userLength; j++) {
 				
-// LENGTH OF 1				
-				if(userLength==1) {	
-				System.out.println("Enter a string: ");
-				a = in.next();
-				methodArray[i] = a;
-				printArray(methodArray);
-				return; 
+				key1 = list[i]; 
+				key2 = list[i+1]; 
+				
+				if(key2.compareTo(key1)<0) {
+					
+					minIndex = j;
 			}
 			
-// LENGTH OF 2
-				if(userLength==2) {
-				System.out.println("Enter a string: ");
-				a = in.next();
-							
-				System.out.println("Enter a string: ");
-				b = in.next();
 				
-// compare to sort for array of size 2			
-			if(b.compareTo(a)<0) {
-					 
-					temp = a;
-					a = b;
-					b = temp;
-					
-					methodArray[i] = a;
-					methodArray[i+1] = b; 
-					printArray(methodArray);
-					return;
-			}
-				methodArray[i] = a;
-				methodArray[i+1] = b;
-				printArray(methodArray);
-				return; 
-				 
-			}	
-// close if statement		
-
-				
-// LENGTH OF 3 OR MORE				
+		} 
+			temp = list[i];
+			list[i] = list[i+1];
+			list[i+1] = temp;
 			
+		
+		}
+		
+		System.out.println("Done");
+		printArray(list);
 
-				String currentEntry = "";
-				int currentIndex = 0;
-				System.out.println("Enter a string: ");
-				currentEntry = in.next();
-				 
-				while(currentIndex<userLength) {
-				for(i=0; i<userLength; i++) {
-					
-					
-					if(userLength==1) {
-						methodArray[i] = currentEntry;
-						printArray(methodArray);
-						return;
-					}
-					
-					for(int j=i+1; j<userLength; j++) {
-						
-					System.out.println("Enter a string: ");
-					currentEntry = in.next();	
-						
-// keep on getting an error on this comparison??
-					if(currentEntry.compareTo(methodArray[i])<0) {
-						
-						temp = methodArray[i];
-						currentEntry = methodArray[i];
-						methodArray[i] = temp;
-						
-						
-					}
-					
-					currentEntry = methodArray[i+1];
-					
-				} 
-					
-			}
-
-		}	
-
-	}
-// while loop within the range of the array length		
-		return;
-// return to main method
-	
-	}
+}
 // close sortArray method	
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 // print array method named printArray	
