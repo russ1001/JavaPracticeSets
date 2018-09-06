@@ -135,29 +135,29 @@ public class streffTask22 {
 	}
 		
 		
-		// next check diagonal from bottom left to top right (descending)
+		// next check diagonal from bottom left to top right (descending or I think it is called major diagonal)
 		
 		for(int i=values.length-1; i>=0; i--) {
 			
-			int x = 0;
-			int y = i;
-			int currentValue = values[y][x];
+			int rows = 0;
+			int columns = i;
+			int currentValue = values[columns][rows];
 			int consecutiveCount = 0;
 			
 			for(int j=0; j<values[0].length; j++) {
 				
-				if(values[y][x] == currentValue) {
+				if(values[columns][rows] == currentValue) {
 					
 					consecutiveCount++; 
 					if(consecutiveCount == 4) return true;
 				}
 				else {
 					
-					currentValue = values[y][x];
+					currentValue = values[columns][rows];
 					consecutiveCount = 1;
 				}
-				x++;
-				y--;
+				rows++;
+				columns--;
 				
 			}
 		}
