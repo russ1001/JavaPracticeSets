@@ -26,7 +26,7 @@
 import java.util.*;
 
 // declare the class streffTask2 as public
-public class streffTask22 {
+public class streffTask2 {
 
 	// declare the main method
 	public static void main(String[] args) {
@@ -72,7 +72,7 @@ public class streffTask22 {
 		// call the isConsecutiveFour method from main passing the two-dimensional array game
 		isConsecutiveFour(game);
 		
-		
+		input.close();
 		
 	}
 // close main method
@@ -81,7 +81,7 @@ public class streffTask22 {
 	// initialize and declare the method isConsecutiveFour that will test whether
 	// there are 4 consecutive numbers entered into the array by the user 
 	public static boolean isConsecutiveFour(int[][] values) {
-		
+		 
 		
 		// first check rows from left to right, top to bottom
 		
@@ -135,36 +135,33 @@ public class streffTask22 {
 	}
 		
 		
-		// next check diagonal from left to right going downwards
+		// next check diagonal from bottom left to top right 
 		
-		for(int j=0; j<values.length-1;j++) {
-						
-			int x = values.length-4;
-			int consecutiveCount = 0;
-			int currentValue = values[j][x];
+		for(int i=values.length-1; i>=0; i--) {
 			
-			for(int i=values.length-4; i>=0; i++) {
+			int x = 0;
+			int y = i;
+			int currentValue = values[y][x];
+			int consecutiveCount = 0;
+			
+			for(int j=0; j<values[0].length; j++) {
 				
-				if(currentValue == values[j][i]) {
+				if(values[y][x] == currentValue) {
 					
-					consecutiveCount++;
+					consecutiveCount++; 
 					if(consecutiveCount == 4) return true;
-	
 				}
-				else
+				else {
+					
+					currentValue = values[y][x];
 					consecutiveCount = 1;
-					currentValue = values[j+1][i+1];
+				}
+				x++;
+				y--;
 				
 			}
-			
-						
-			 
-			
 		}
-		
-		
-	
-		
+
 		
 		
 		
@@ -173,8 +170,8 @@ public class streffTask22 {
 		
 		
 		
-	
-	}
+		return false;
+		}
 // close isConsecutiveFour method
 	
 	
